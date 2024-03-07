@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lemon&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!------------Favicon----------->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+    <title>Contact Us</title>
+    <style>
+      body {
+        font-family: "Noto Serif", serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        width: 80%;
+        margin: 50px auto;
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+      }
+
+      .col {
+        flex: 1;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+
+      h2 {
+        font-size: 26px;
+        color: #009aca;
+        margin-bottom: 20px;
+      }
+
+      hr {
+        border: 0;
+        border-top: 2px solid #009aca;
+        width: 100%;
+        margin: 10px 0;
+      }
+
+      .details p {
+        font-size: 18px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+
+      .details p i {
+        color: #009aca;
+        margin-right: 10px;
+      }
+
+      .map-container {
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .col2 {
+        flex: 1;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+
+      label {
+        font-size: 18px;
+        display: block;
+        margin-bottom: 8px;
+      }
+
+      input,
+      textarea {
+        font-family: "Noto Serif", serif;
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 18px;
+        transition: border-color 0.3s ease;
+      }
+
+      input:focus,
+      textarea:focus {
+        outline: none;
+        border-color: #009aca;
+      }
+
+      textarea {
+        height: 150px;
+        resize: vertical;
+      }
+
+      button {
+        background-color: #009aca;
+        color: #fff;
+        padding: 15px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 18px;
+        transition: background-color 0.3s ease;
+        width: 100%;
+      }
+
+      button:hover {
+        background-color: #056886;
+      }
+      /*Media Queries*/
+      @media screen and (max-width: 768px) {
+        hr {
+          margin-top: -10px;
+        }
+        iframe {
+          height: 350px;
+        }
+        h2 {
+          font-size: 22px;
+        }
+        .details p {
+          margin-top: -10px;
+          font-size: 14px;
+        }
+        .container {
+          width: 90%;
+        }
+
+        .row {
+          flex-direction: column;
+        }
+
+        .col {
+          width: 100%;
+          margin-bottom: 30px;
+        }
+
+        .col2 {
+          width: 100%;
+        }
+
+        .details,
+        form {
+          padding: 20px;
+        }
+
+        .details .map-container {
+          margin-top: 20px;
+        }
+
+        input,
+        textarea {
+          font-size: 12px;
+        }
+
+        button {
+          font-family: "Noto Serif", serif;
+          font-size: 14px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h2>Contact Information</h2>
+          <hr />
+          <div class="details">
+            <p>
+              <i class="fas fa-map-marker-alt"></i> Bharatpur-5, Radhakrishna
+              Road, Bharatpur 44200
+            </p>
+            <p><i class="fas fa-phone"></i> 9824151293</p>
+            <p><i class="fas fa-envelope"></i> naukri@gmail.com</p>
+            <div class="map-container">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2317.6669687573426!2d84.37581756852332!3d27.67785436841606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3994fbb616e23749%3A0x11326a92565d150!2sShree%20Radhakrishna%20Temple%2C%20Shivghat!5e0!3m2!1sen!2snp!4v1708867850483!5m2!1sen!2snp"
+                width="100%"
+                height="378"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <h2>Leave Us A Message</h2>
+          <hr />
+          <form id="contactForm">
+            <label for="name">Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              placeholder="Name"
+            />
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="Email Address"
+            />
+            <label for="subject">Subject:</label>
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              required
+              placeholder="Subject matter"
+            />
+            <label for="message">Message:</label>
+            <textarea
+              id="message"
+              name="message"
+              required
+              placeholder="Your Message"
+            ></textarea>
+            <button>Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

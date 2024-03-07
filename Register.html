@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lemon&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!------------Favicon----------->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+      body {
+        font-family: "Noto Serif", serif;
+        margin-top: 260px;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f5f5f5;
+      }
+
+      .container {
+        background-color: #f9f9f9;
+        padding: 40px;
+        border-radius: 8px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 20px;
+        width: 1200px;
+      }
+
+      .left-box {
+        flex: 1;
+      }
+
+      .right-box {
+        flex: 2;
+      }
+
+      .left-content {
+        margin-bottom: 20px;
+      }
+
+      .left-content h2 {
+        color: #009aca;
+        margin-bottom: 10px;
+        font-size: 25px;
+      }
+
+      .left-content ul {
+        list-style-type: none;
+        margin-left: 20px;
+        padding-left: 0;
+      }
+
+      .left-content ul li {
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+      }
+
+      .left-content ul li i {
+        margin-right: 10px;
+      }
+      .left-content .fas {
+        color: #009aca;
+        font-size: 20px;
+      }
+      .form-container {
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      .form-container p {
+        font-family: "Noto Serif", serif;
+        font-size: 15px;
+        margin-top: -20px;
+      }
+      .form-container h2 {
+        color: #009aca;
+        font-size: 30px;
+        font-family: "Noto Serif", serif;
+      }
+      .form-group {
+        margin-bottom: 20px;
+        position: relative;
+        font-size: 18px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+        color: #555;
+        font-size: 19px;
+      }
+
+      input {
+        width: calc(100% - 36px);
+        padding: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 18px;
+        font-family: "Noto Serif", serif;
+        transition: border-color 0.3s ease;
+      }
+
+      input:focus {
+        outline: none;
+        border-color: #009aca;
+      }
+
+      .password-input {
+        display: flex;
+        align-items: center;
+      }
+
+      .show-hide {
+        cursor: pointer;
+        opacity: 0.6;
+        transition: opacity 0.3s ease;
+        position: absolute;
+        margin-left: 650px;
+      }
+
+      .show-hide:hover {
+        opacity: 1;
+      }
+
+      button {
+        width: 100%;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 4px;
+        background-color: #009aca;
+        color: #fff;
+        cursor: pointer;
+        font-size: 18px;
+        font-family: "Noto Serif", serif;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #1181a3;
+      }
+
+      .footer {
+        margin-top: 20px;
+        text-align: center;
+        color: #555;
+      }
+
+      .footer span {
+        margin-right: 10px;
+      }
+
+      .footer a {
+        color: #009aca;
+        text-decoration: none;
+      }
+
+      .footer a:hover {
+        text-decoration: underline;
+      }
+
+      .file-upload {
+        position: relative;
+        overflow: hidden;
+        margin-top: 20px;
+      }
+
+      .file-upload input[type="file"] {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+        cursor: pointer;
+        opacity: 0;
+      }
+
+      .file-upload-label {
+        display: inline-block;
+        padding: 12px 20px;
+        background-color: #009aca;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      .file-upload-label:hover {
+        background-color: #1181a3;
+      }
+
+      .checkbox-group {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+      }
+
+      .checkbox-group input[type="checkbox"] {
+        margin-left: -310px;
+        background-color: #009aca;
+      }
+      .checkboxlabel {
+        margin-top: 8px;
+        margin-left: -320px;
+      }
+      .work-status {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .work-status div {
+        background-color: #f0f0f0;
+        padding: 10px;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      .work-status div.selected {
+        background-color: #009aca;
+        color: #fff;
+      }
+      /*Media Queries*/
+      @media screen and (max-width: 768px) {
+        .container {
+          flex-direction: column;
+          margin-top: 750px;
+          align-items: center;
+          width: 90%;
+        }
+        .left-box,
+        .right-box {
+          width: 100%;
+          margin: 0;
+        }
+
+        .left-content h2 {
+          font-size: 22px;
+        }
+
+        .left-content ul li {
+          font-size: 14px;
+        }
+
+        .right-box {
+          margin-top: 30px;
+        }
+
+        .right-box {
+          width: 100%;
+          margin: 0;
+        }
+        .form-container {
+          padding: 20px;
+        }
+        .form-container h2 {
+          font-size: 22px;
+          margin-bottom: 25px;
+        }
+        .form-container label {
+          font-size: 14px;
+        }
+        .form-container p {
+          font-size: 14px;
+        }
+        .form-container .show-hide {
+          font-size: 14px;
+        }
+        .form-container input {
+          font-size: 12px;
+        }
+        .form-group {
+          font-size: 16px;
+        }
+
+        .password-input {
+          margin-left: 0;
+        }
+        .work-status {
+          font-size: 14px;
+        }
+        .checkbox-group label {
+          font-size: 14px;
+          margin-left: -50px;
+        }
+        .show-hide {
+          margin-left: calc(100% - 40px);
+        }
+
+        .checkbox-group input[type="checkbox"] {
+          margin-left: 0;
+        }
+
+        .checkboxlabel {
+          margin-left: 0;
+        }
+
+        .work-status {
+          justify-content: center;
+        }
+        #updates {
+          margin-top: -8px;
+          margin-left: -50px;
+        }
+        .left-content img {
+          display: block;
+          align-items: center;
+          margin-top: 50px;
+          width: 300px;
+          max-width: 100%;
+        }
+        button {
+          font-size: 14px;
+        }
+        .footer {
+          font-size: 14px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="left-box">
+        <div class="left-content">
+          <img src="image/findnaukri.png" alt="" srcset="" />
+          <h2>Create your Naukri profile</h2>
+          <ul>
+            <li>
+              <i class="fas fa-user"></i>Build your profile and let recruiters
+              find you
+            </li>
+            <li>
+              <i class="fas fa-envelope"></i>Get job postings delivered right to
+              your email
+            </li>
+            <li>
+              <i class="fas fa-briefcase"></i>Find a job and grow your career
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="right-box">
+        <div class="form-container">
+          <h2>Create your Naukri profile</h2>
+          <p>Search & apply to jobs from Nepal's No.1 Job Site</p>
+          <form id="signupForm">
+            <div class="form-group">
+              <label for="fullname">Full Name</label>
+              <input
+                type="text"
+                id="fullname"
+                name="fullname"
+                placeholder="Full Name"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="address">Address</label>
+              <input
+                type="text"
+                id="address"
+                name="address"
+                placeholder="Address"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Phone Number"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Email Address"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <div class="password-input">
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  placeholder="Password"
+                  required
+                />
+                <span class="show-hide" onclick="togglePassword()">
+                  <i class="fas fa-eye" id="eyeIcon"></i>
+                </span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="confirm_password">Confirm Password</label>
+              <input
+                type="password"
+                id="confirm_password"
+                name="confirm_password"
+                placeholder="Confirm Password"
+                required
+              />
+            </div>
+            <div class="form-group work-status">
+              <div onclick="selectWorkStatus(this)">I'm experienced</div>
+              <div onclick="selectWorkStatus(this)">I'm a fresher</div>
+            </div>
+            <div class="form-group checkbox-group">
+              <input type="checkbox" id="updates" name="updates" />
+              <label for="updates" class="checkboxlabel">
+                Agree to the Terms and Conditions & Privacy Policy of
+                Naukri.com</label
+              >
+            </div>
+            <button type="submit">Sign Up</button>
+          </form>
+          <div class="footer">
+            <span>Already have an account? <a href="login.html">Login</a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function togglePassword() {
+        var passwordInput = document.getElementById("password");
+        var eyeIcon = document.getElementById("eyeIcon");
+
+        if (passwordInput.type === "password") {
+          passwordInput.type = "text";
+          eyeIcon.classList.remove("fa-eye");
+          eyeIcon.classList.add("fa-eye-slash");
+        } else {
+          passwordInput.type = "password";
+          eyeIcon.classList.remove("fa-eye-slash");
+          eyeIcon.classList.add("fa-eye");
+        }
+      }
+
+      function selectWorkStatus(selectedDiv) {
+        var workStatusDivs = document.querySelectorAll(".work-status div");
+        workStatusDivs.forEach((div) => {
+          div.classList.remove("selected");
+        });
+        selectedDiv.classList.add("selected");
+      }
+    </script>
+  </body>
+</html>

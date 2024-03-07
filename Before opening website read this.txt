@@ -1,0 +1,2 @@
+The website appears properly when zoomed to 67%.
+Before running the website, adjust the zoom level to 67%. 
